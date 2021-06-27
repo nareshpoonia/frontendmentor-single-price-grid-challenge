@@ -20,22 +20,28 @@ body {
   font-family: "Karla", sans-serif;
   border: 2px solid red;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 900px;
 }
 
 .container > div {
   flex: 1;
-  padding: 20px;
   max-height: 100vh;
 }
 
 .services-section {
   background-color: white;
+  padding: 20px;
 }
 
 .invitation {
@@ -51,9 +57,13 @@ body {
 .services {
   line-height: 1.8;
 }
+.sidebyside {
+  padding: 0;
+}
 
 .pricing-section {
   background-color: var(--cyan);
+  padding: 20px;
 }
 
 .subscription {
@@ -66,8 +76,6 @@ body {
   line-height: 1.6;
   color: white;
   padding-bottom: 30px;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .dollar {
@@ -78,21 +86,11 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  padding-top: 1em ;
-  padding-bottom: 1em;
-  padding-left: 10px;
-  padding-right: 1em;
+button {
+  padding: 12px 0px;
+  width: 100%;
   background-color: var(--bright-yellow);
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.8em;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  flex: 1;
-  align-self: center;
-  min-width: 0;
-  width: 239px;
+  border-radius: 5px;
 }
 
 .why-us {
@@ -115,22 +113,68 @@ a {
 }
 .attribution {
   margin-top: 20px;
+  text-align: center;
 }
-@media (min-width: 375px) {
-  .btn {
-    width: 248px;
+
+@media (min-width: 667px) {
+  .attribution {
+    flex-direction: column;
+    margin-top: 100px;
+    justify-content: center;
   }
-  @media (min-width: 414px) {
-    .btn {
-      width: 288px;
-    } 
+}
+@media (min-width: 740px) {
+  .attribution {
+    flex-direction: column;
+    margin-top: 120px;
+    justify-content: center;
+  }
+}
 
-  @media (min-width: 768px) {
-      .btn {
-        width: 642px;
-      } 
+@media (min-width: 801px) {
+  .sidebyside {
+    display: flex;
+    flex-direction: row;
+  }
+  .pricing-section {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+  .why-us {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+  .attribution {
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+@media (min-width: 812px) {
+  .container {
+    width: 84%;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+  }
+  .container {
+    max-width: 1024px;
+    width: 64%;
+  }
+}
 
-      @media (min-width: 800px) {
-        .btn {
-          width: 680px;
-        } 
+@media (min-width: 1280px) {
+  body {
+    padding-right: 0px;
+    padding-left: 60px;
+  }
+  .container {
+    width: 60%;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+}
