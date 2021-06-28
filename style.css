@@ -22,9 +22,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  max-width: 900px;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  width: inherit;
 }
 
 .container {
@@ -42,6 +43,8 @@ body {
 .services-section {
   background-color: white;
   padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .invitation {
@@ -56,6 +59,7 @@ body {
 
 .services {
   line-height: 1.8;
+  color: var(--grayish-blue);
 }
 .sidebyside {
   padding: 0;
@@ -91,10 +95,18 @@ button {
   width: 100%;
   background-color: var(--bright-yellow);
   border-radius: 5px;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--bright-yellow);
 }
 
 .why-us {
-  background-color: cyan;
+  background-color: rgba(74, 190, 189, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .why {
@@ -140,11 +152,13 @@ button {
     flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 1;
+    border-bottom-left-radius: 10px;
   }
   .why-us {
     flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 1;
+    border-bottom-left-radius: 0px;
   }
   .attribution {
     flex-direction: column;
@@ -158,9 +172,6 @@ button {
   }
 }
 @media (min-width: 1024px) {
-  body {
-    max-width: 1024px;
-  }
   .container {
     max-width: 1024px;
     width: 64%;
